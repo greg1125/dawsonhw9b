@@ -1,5 +1,41 @@
-const Account = require('./accounting');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 1 – Form</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a href="/">Link to Start Page</a>
+  <h2>Asher's Sample Form</h2>
+  <form>
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
 
-const myAccount = new Account("Jeff");
-myAccount.credit(150);
-console.log(myAccount.describe());
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Payment Type:</label><br>
+    <input type="radio" name="choice" value="Cash" checked> Cash<br>
+    <input type="radio" name="choice" value="Credit Card"> Credit Card<br>
+    <input type="radio" name="choice" value="Google Pay"> Google Pay<br>
+    <input type="radio" name="choice" value="Apple Pay"> Apple Pay<br><br>
+
+    <input type="checkbox" name="promo" value="on"> Sign me up for special promotions<br><br>
+
+    <label>Preferred Location:</label><br>
+    <select name="location">
+      <option value="la">Los Angeles</option>
+      <option value="oc">Orange County</option>
+      <option value="riv">Riverside</option>
+      <option value="sd">San Diego</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Cancel</button>
+  </form>
+
+  <p id="result"></p>
+  <script src="/ex1.js"></script>
+</body>
+</html>

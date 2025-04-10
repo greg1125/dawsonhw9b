@@ -1,5 +1,17 @@
-const Account = require('./accounting');
-
-const myAccount = new Account("Jeff");
-myAccount.credit(150);
-console.log(myAccount.describe());
+document.getElementById("articleForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+  
+    fetch("/ex3", {
+      method: "POST",
+      body: formData
+    })
+      .then(res => res.text())
+      .then(msg => {
+        document.getElementById("result").textContent = msg;
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  });
+  

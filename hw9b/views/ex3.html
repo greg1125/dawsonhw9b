@@ -1,5 +1,26 @@
-const Account = require('./accounting');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 3 – Add Article</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a href="/">Link to Start Page</a>
+  <h2>Asher's Articles/Form Solution</h2>
 
-const myAccount = new Account("Jeff");
-myAccount.credit(150);
-console.log(myAccount.describe());
+  <form id="articleForm">
+    <label>Title:</label><br>
+    <input type="text" name="title" required><br><br>
+
+    <label>Content:</label><br>
+    <textarea name="content" required></textarea><br><br>
+
+    <button type="submit">Add</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script src="/ex3.js"></script>
+</body>
+</html>
